@@ -1,0 +1,18 @@
+//Variables
+$white: 								#fff;
+
+
+.navbar{
+	.navbar-brand{
+		padding-right: 1rem;
+		border-right: 2px solid $white;
+		.text-most{
+			display: block;
+			font-size: 30px;
+		}
+	}
+
+	.title{
+		color: $white;
+	}
+}
