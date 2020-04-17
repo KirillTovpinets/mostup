@@ -3,14 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
 	<title>Document</title>
 </head>
 <body>
-	<header>
+	<header class="header">
 		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-			<div class="container">
+			<div class="container-fluid">
 				<a class="navbar-brand" href="#">
 					<img src="./img/logo.png" alt="логотип мост up">
 				</a>
@@ -25,7 +26,7 @@
 							<a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Спектаки</a>
+							<a class="nav-link" href="#">Спектакли</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">О нас</a>
@@ -39,16 +40,34 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#">RU/EN</a>
 						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fas fa-search"></i>
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-	<main class="main-content"></main>
+	<main class="main-content">
+		<section class="get-ticket section">
+			<div class="container">
+				<div class="get-ticket__row d-flex justify-content-between">
+					<div class="get-ticket__text-container">
+						<span class="get-ticket__title">Заказ билетов</span>
+						<p class="get-ticket__description">Вы можете выбрать спектакть и дату, когда вы хотите посмотреть его</p>
+					</div>
+					<button class="btn btn-warning my-auto btn-lg">Заказать</button>
+				</div>
+			</div>
+		</section>
+	</main>
 	<footer class="footer"></footer>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
 </body>
 </html>

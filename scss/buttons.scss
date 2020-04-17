@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+.btn{
+	padding: 1rem 3rem;
+	border-radius: 0px;
+	border: none;
+	text-transform: uppercase;
+	font-size: 1rem;
+}
+
+.btn-warning{
+	background-color: $warning;
+	&:hover {
+		background-color: $warningHover;
+		color: $white;
+	}
+}

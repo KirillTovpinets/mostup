@@ -1,18 +1,63 @@
-//Variables
-$white: 								#fff;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import './scss/buttons.scss';
+@import './scss/variables.scss';
 
+*{
+	box-sizing: border-box;
+}
 
-.navbar{
-	.navbar-brand{
-		padding-right: 1rem;
-		border-right: 2px solid $white;
-		.text-most{
-			display: block;
-			font-size: 30px;
+body{
+	p{
+		font-weight: lighter;
+	}
+}
+
+.header{
+	height: 120vh;
+	background-image: url('./img/front-image.jpg');
+	background-size: cover;
+	background-position: center;
+	.navbar{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		font-weight: lighter;
+		&.bg-dark{
+			background-color: $black !important;
+		}
+		.navbar-brand{
+			padding-right: 1rem;
+			border-right: 2px solid $white;
+			.text-most{
+				display: block;
+				font-size: 30px;
+			}
+		}
+	
+		.title{
+			color: $white;
 		}
 	}
+}
 
-	.title{
+.main-content{
+	& * {
 		color: $white;
+	}
+
+	.section {
+		padding: 50px 0px;
+	}
+
+	.get-ticket{
+		&__title{
+			font-size: 30px;
+		}
+
+		&__description{
+			opacity: .5;
+		}
+		background-color: $dark-gray;
 	}
 }
