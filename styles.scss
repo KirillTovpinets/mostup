@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&display=swap');
 @import './scss/buttons.scss';
 @import './scss/variables.scss';
+@import './scss/slick-slider.scss';
 
 *{
 	box-sizing: border-box;
@@ -14,7 +17,7 @@ body{
 
 .header{
 	height: 120vh;
-	background-image: url('./img/front-image.jpg');
+	background-image: url('/img/front-image.jpg');
 	background-size: cover;
 	background-position: center;
 	.navbar{
@@ -23,6 +26,7 @@ body{
 		left: 0;
 		width: 100%;
 		font-weight: lighter;
+		z-index: $top-navbar-zindex;
 		&.bg-dark{
 			background-color: $black !important;
 		}
@@ -42,15 +46,32 @@ body{
 }
 
 .main-content{
-	& * {
-		color: $white;
-	}
 
 	.section {
 		padding: 50px 0px;
+
+		&__title{
+			font-family: $welcomeFont;
+			font-size: 50px;
+			text-align: center;
+			margin-bottom: 1rem;
+		}
+
+		&__divider{
+			text-align: center;
+			margin-bottom: 3rem;
+		}
+
+		&.featured-shows{
+			background-color: $black;
+			color: $white;
+		}
 	}
 
 	.get-ticket{
+		* {
+			color: $white;
+		}
 		&__title{
 			font-size: 30px;
 		}
@@ -59,5 +80,50 @@ body{
 			opacity: .5;
 		}
 		background-color: $dark-gray;
+	}
+
+	.welcome {
+		padding-top: 100px;
+		position: relative;
+
+		&__quote{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			&__text{
+					font-size: 80px;
+					opacity: .1;
+					font-family: $welcomeFont;
+					width: 100%;
+					span {
+						display: block;
+						&:first-child {
+							text-align: left;
+							&::before{
+								content: '\201C ';
+							}
+						}
+						&:last-child {
+							text-align: right;
+							&::after{
+								content: '\201D';
+							}
+						}
+					}
+			}
+		}
+		&__title{
+			text-align: center;
+			font-size: 60px;
+			line-height: 60px;
+			font-family: $welcomeFont;
+			margin-bottom: 3rem;
+		}
+		&__text{
+			text-align: center;
+		}
 	}
 }

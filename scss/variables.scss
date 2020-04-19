@@ -2,11 +2,16 @@
 $white: 									#fff;
 $black: 									#010101;
 $dark-gray:									#111;
+$gray:											#666;
 
 //font
 $mainfont: 									'Roboto', sans-serif;
+$welcomeFont: 							'Cormorant Garamond', serif;
 
 //bootstrap override
 $warning:					#b49761;
 $warningHover: 			#a49f95;
+
+//z-index
+$top-navbar-zindex:				1000;
 

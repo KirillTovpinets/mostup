@@ -1,11 +1,16 @@
 @import './variables.scss';
 
 .btn{
-	padding: 1rem 3rem;
+	&.btn-lg{
+		padding: 1rem 3rem;
+	}
+	&.btn-sm{
+		padding: 11px 25px;
+	}
 	border-radius: 0px;
 	border: none;
 	text-transform: uppercase;
-	font-size: 1rem;
+	font-size: .8rem;
 }
 
 .btn-warning{

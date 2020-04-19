@@ -1,0 +1,56 @@
+@import './variables.scss';
+
+.slick-dots{
+	li{
+		button {
+			&::before {
+				color: $gray;
+			}
+		}
+
+		&.slick-active{
+			button {
+				&::before{
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+.featured-shows{
+	.featured-shows__show-item{
+		padding: 0 1rem;
+		&__image-container{
+			&__preview{
+				width: 100%;
+			}
+		}
+		&__description{
+			padding: 10px 20px;
+			padding-right: 0px;
+			margin-left: 20px;
+			margin-top: -30px;
+			background-color: $black;
+			position: relative;
+			&__title{
+				font-family: $welcomeFont;
+				font-style: italic;
+				font-size: 30px;
+				font-weight: lighter;
+				margin-bottom: 5px;
+			}
+			&__type{
+				display: block;
+				margin-bottom: 1rem;
+				font-size: .9rem;
+				color: $warning;
+			}
+			&__dates{
+				font-weight: lighter;
+				opacity: .3;
+				font-size: .9rem;
+			}
+		}
+	}
+}
