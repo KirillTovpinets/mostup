@@ -5,6 +5,7 @@
 @import './scss/variables.scss';
 @import './scss/slick-slider.scss';
 @import './scss/components/show-item.scss';
+@import './scss/components/team-members-slider.scss';
 @import './animate.css';
 
 *{
@@ -71,9 +72,64 @@ body{
 			margin-bottom: 3rem;
 		}
 
-		&.featured-shows{
+		&.featured-shows,
+		&.our-actors{
 			background-color: $black;
 			color: $white;
+		}
+		&.upcoming-events {
+			padding-bottom: 100px;
+			.upcoming-events__event{
+				display: flex;
+				padding: 50px 0px;
+				&:not(:last-child){
+					border-top: 1px solid $light-gray;
+				}
+				&:not(:first-child) {
+					border-bottom: 1px solid $light-gray;
+				}
+				&__description{
+					&__title{
+						font-family: $welcomeFont;
+						font-size: 2rem;
+						font-style: italic;
+					}
+					&__duration{
+						font-weight: lighter;
+						font-size: .9rem;
+					}
+				}
+				&__date{
+					display: flex;
+					align-items: center;
+					margin-right: 30px;
+					&__day-number{
+						padding: 0px 30px;
+						font-size: 100px;
+						font-family: $welcomeFont;
+						font-style: italic;
+						color: $light-gray;
+					}
+					&__details{
+						.month,
+						.weekday{
+							display: block;
+						}
+						.month{
+							font-family: $welcomeFont;
+							font-size: 1.3rem;
+							line-height: 1;
+						}
+						.weekday{
+							font-weight: lighter;
+						}
+					}
+				}
+
+				img{
+					width: 20%;
+				}
+			}
 		}
 	}
 

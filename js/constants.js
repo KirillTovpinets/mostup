@@ -35,3 +35,9 @@ export const SLICK_CONFIG = {
 		// instead of a settings object
 	]
 }
+
+export const TEAM_SLIDER_CONFIG = {
+	...SLICK_CONFIG,
+	slidesToShow: 7,
+	slidesToScroll: 7,
+}

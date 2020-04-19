@@ -1,6 +1,10 @@
-import Slider from './show-slider';
+import ShowSlider from './show-slider';
+import TeamSlider from './team-slider';
 
 $(document).ready(function() {
-	const slider = new Slider();
-	slider.init();
+	const showSlider = new ShowSlider();
+	const teamSlider = new TeamSlider();
+
+	teamSlider.init();
+	showSlider.init();
 })

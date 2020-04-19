@@ -1,6 +1,6 @@
 import { SLICK_CONFIG } from "./constants";
 
-export default class	Slider {
+export default class	ShowSlider {
 
 	constructor(){
 		this.container = $('.featured-shows__shows-slider');

@@ -1,0 +1,76 @@
+@import '../variables.scss';
+
+.our-actors {
+	&__list-slider{
+		&__list-item{
+			padding: 0 10px;
+
+			&__avatar-container{
+				position: relative;
+				overflow: hidden;
+				&:hover{
+					cursor: pointer;
+					.overlay{
+						opacity: .5;
+					}
+
+					.icons-container{
+						transform: scale(1);
+						opacity: 1;
+					}
+				}
+				&:hover &__avatar{
+					transform: scale(1.1);
+				}
+				.overlay{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+					background-color: $warning;
+					opacity: 0;
+					transition: all .3s ease-in;
+				}
+				.icons-container{
+					z-index: 2;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: space-around;
+					padding: 20px;
+					opacity: 0;
+					transform: scale(1.1);
+					transition: all .3s ease-in;
+					color: $black;
+				}
+
+				&__avatar{
+					transition: all .3s ease-in;
+				}
+			}
+
+			&__name{
+				font-size: 1.2rem;
+				font-family: $welcomeFont;
+				font-style: italic;
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 3px;
+			}
+
+			&__role{
+				text-align: center;
+				display: block;
+				font-weight: lighter;
+				opacity: .4;
+				font-size: .9rem;
+			}
+		}
+	}
+}
