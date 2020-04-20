@@ -1,7 +1,5 @@
 .vscode
 prepros.config
-styles.css
-css/
 node_modules
 dist
 bundle.js
