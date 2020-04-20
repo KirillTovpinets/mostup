@@ -1,4 +1,5 @@
 const path = require('path');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = {
   mode: 'development',
   entry: [path.join(__dirname, 'js', 'index'), path.join(__dirname, 'styles.scss')],
@@ -8,7 +9,8 @@ module.exports = {
     publicPath: '/dist/',
     filename: "bundle.js",
     chunkFilename: '[name].js'
-  },
+	},
+	plugins: [new OptimizeCSSAssetsPlugin({}),],
   module: {
     rules: [{
       test: /.jsx?$/,
@@ -39,9 +41,7 @@ module.exports = {
 					}
 				},
 				'extract-loader',
-
 				'css-loader?-url',
-
 				'sass-loader',
 			],
 		},]
