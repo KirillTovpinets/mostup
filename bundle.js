@@ -218,7 +218,7 @@ class TeamSlider {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "/css/styles.css");
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "/styles.css");
 
 /***/ }),
 
