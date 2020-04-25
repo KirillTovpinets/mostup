@@ -24,6 +24,42 @@ body{
 	background-image: url('img/front-image.jpg');
 	background-size: cover;
 	background-position: center;
+	position: relative;
+
+	.theater-title{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		&__title{
+			color: $white;
+			font-size: 8rem;
+			font-family: $welcomeFont;
+			font-style: italic;
+			z-index: 10;
+			margin-bottom: 0rem;
+			line-height: 1;
+		}
+		&__subtitle{
+			font-size: 2rem;
+			color: $white;
+			z-index: 10;
+		}
+	}
+
+	&::before{
+		content: '';
+		display: block;
+		position: absolute;
+		z-index:0;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: $black;
+		opacity: .5;
+	}
 	.navbar{
 		position: fixed;
 		top: 0;
