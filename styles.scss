@@ -6,6 +6,7 @@
 @import './scss/slick-slider.scss';
 @import './scss/components/show-item.scss';
 @import './scss/components/team-members-slider.scss';
+@import './scss/components/more-button.scss';
 @import './animate.css';
 
 *{
@@ -59,6 +60,10 @@ body{
 			font-size: 50px;
 			text-align: center;
 			margin-bottom: 0rem;
+		}
+
+		&__title {
+			margin-bottom: 1rem;
 		}
 
 		&__title-stripe {
@@ -278,6 +283,51 @@ body{
 			}
 			&__item{
 				width: 100%;
+			}
+		}
+	}
+
+	.news-section{
+		&__item{
+			display: flex;
+			align-items: center;
+			margin-bottom: 1rem;
+			&__preview{
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				margin-bottom: 0;
+				flex-grow: 1;
+			}
+			&__content-container{
+				flex-grow: 2;
+				padding-left: 	1.5rem;
+				&__title-section{
+					padding: 1rem;
+					padding-top: 0px;
+					background-color: $white;
+					margin-left: -4rem;
+					position: relative;
+					&__date{
+						color: $gray;
+						font-size: .8rem;
+					}
+					&__title{
+						font-style: italic;
+						font-family: $welcomeFont;
+					}
+					&__category{
+						position: absolute;
+						top: 0;
+						right: 0;
+						color: $warning;
+						font-size: .8rem;
+					}
+				}
+				&__content{
+					font-size: .8rem;
+				}	
 			}
 		}
 	}

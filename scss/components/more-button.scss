@@ -1,0 +1,15 @@
+@import '../variables.scss';
+.more-button{
+	padding: 2rem;
+	text-align: center;
+	font-style: italic;
+	&__button{
+		color: $warning;
+		font-family: $welcomeFont;
+		font-size: 1.2rem;
+		&:hover{
+			color: $black;
+			text-decoration: none;
+		}
+	}
+}
