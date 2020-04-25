@@ -58,7 +58,7 @@ body{
 			font-family: $welcomeFont;
 			font-size: 50px;
 			text-align: center;
-			margin-bottom: 1rem;
+			margin-bottom: 0rem;
 		}
 
 		&__title-stripe {
@@ -227,6 +227,57 @@ body{
 						}
 					}
 				}
+			}
+		}
+	}
+
+	.gallery {
+		&__photo{
+			position: relative;
+			&__title{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $white;
+				&__content{
+					z-index: 1;
+					font-family: $welcomeFont;
+					font-size: 1.5rem;
+					font-style: italic;
+					transition: all .3s ease;
+				}
+				&:before{
+					z-index: 0;
+					content: '';
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-color: $black;
+					opacity: .3;
+					transition: all .3s ease;
+				}
+			}
+
+			&:hover {
+				cursor: pointer;
+				.gallery__photo__title::before{
+					opacity: 0;
+				}
+				.gallery__photo__title__content{
+					opacity: .8;
+					color: $white;
+				}
+			}
+			&__item{
+				width: 100%;
 			}
 		}
 	}
