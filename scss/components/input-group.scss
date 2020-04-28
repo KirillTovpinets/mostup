@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+.input-group{
+	.form-control{
+		padding: 1.5rem 2rem;
+		background-color: $dark-gray;
+		border: none;
+		border-radius: 0px;
+		width: 30%;
+	}
+}

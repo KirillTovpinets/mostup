@@ -41,3 +41,13 @@ export const TEAM_SLIDER_CONFIG = {
 	slidesToShow: 7,
 	slidesToScroll: 7,
 }
+
+export const TESTIMONIALS_SLIDER_CONFIG = {
+	...SLICK_CONFIG,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: true,
+	appendDots: '.dots-container',
+	prevArrow: '<button type="button" class="slick-prev-btn"><i class="fas fa-angle-left fa-2x"></i></button>',
+	nextArrow: '<button type="button" class="slick-next-btn"><i class="fas fa-angle-right fa-2x"></i></button>'
+}

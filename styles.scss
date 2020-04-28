@@ -7,6 +7,7 @@
 @import './scss/components/show-item.scss';
 @import './scss/components/team-members-slider.scss';
 @import './scss/components/more-button.scss';
+@import './scss/components/input-group.scss';
 @import './animate.css';
 
 *{
@@ -174,7 +175,8 @@ body{
 		}
 	}
 
-	.get-ticket{
+	.get-ticket,
+	.subscribe{
 		&__row{
 			padding: 30px 0px 0px;
 		}
@@ -188,7 +190,15 @@ body{
 		&__description{
 			opacity: .5;
 		}
-		background-color: $dark-gray;
+		background-color: $black;
+	}
+
+	.subscribe{
+		background-color: $black;
+		&__title{
+			font-style: italic;
+			font-family: $welcomeFont;
+		}
 	}
 
 	.welcome {
@@ -273,6 +283,9 @@ body{
 	}
 
 	.gallery {
+		&__row{
+			width: 100%;
+		}
 		&__photo{
 			position: relative;
 			&__title{
@@ -365,6 +378,108 @@ body{
 					font-size: .8rem;
 				}	
 			}
+		}
+	}
+
+	.testimonials{
+		background-image: url(./img//testimonials-bg.jpg);
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		padding: 80px 0px;
+		text-align: center;
+
+		.dots-container{
+			position: relative;
+			margin-bottom: 80px;
+			margin-top: -50px;
+			.slick-dots{
+				position: relative;
+			}
+		}
+
+		&::before{
+			content: '\201C';
+			color: $white;
+			font-size: 7rem;
+			font-family: $welcomeFont;
+			line-height: .7;
+		}
+
+		&__container{
+			&__author {
+				color: $white;
+				font-style: normal;
+				font-size: 1.2rem;
+				font-family: $welcomeFont;
+			}
+
+			&__item{
+				padding: 0px 80px;
+				margin-bottom: 5rem;
+				&__content{
+					color: $white;
+					font-style: italic;
+					font-size: 2rem;
+					font-family: $welcomeFont;
+					&::before{
+						content: '\201C';
+					}
+					&::after{
+						content: '\201D';
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer{
+	background-color: $dark-gray;
+	padding: 80px 0px;
+	padding-bottom: 0px;
+
+	.block-title{
+		font-family: $welcomeFont;
+		font-style: italic;
+		color: $white;
+		margin-bottom: 1.5rem;
+	}
+
+	.list{
+		list-style: none;
+		padding-left: 0;
+		li{
+			color: $gray;
+			padding: .5rem 0rem;
+			font-size: .9rem;
+			&:not(:last-child){
+				border-bottom: 1px solid $gray;
+			}
+			.svg-inline--fa{
+				color: $warning;
+				margin-right: .5rem;
+			}
+		}
+
+		&.social-icons{
+			display: flex;
+			.social-icon{
+				border-bottom: none;
+				&:not(:last-child){
+					margin-right: .5rem;
+				}
+			}
+		}
+	}
+	.copyright{
+		background-color: $black;
+		padding:30px 0px;
+		text-align: center;
+		margin-top: 80px;
+		p{
+			color: $gray;
+			margin-bottom: 0;
 		}
 	}
 }

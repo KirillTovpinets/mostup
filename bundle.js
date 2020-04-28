@@ -90,13 +90,14 @@
 /*!*************************!*\
   !*** ./js/constants.js ***!
   \*************************/
-/*! exports provided: SLICK_CONFIG, TEAM_SLIDER_CONFIG */
+/*! exports provided: SLICK_CONFIG, TEAM_SLIDER_CONFIG, TESTIMONIALS_SLIDER_CONFIG */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SLICK_CONFIG", function() { return SLICK_CONFIG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TEAM_SLIDER_CONFIG", function() { return TEAM_SLIDER_CONFIG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TESTIMONIALS_SLIDER_CONFIG", function() { return TESTIMONIALS_SLIDER_CONFIG; });
 const SLICK_CONFIG = {
   dots: true,
   infinite: false,
@@ -134,6 +135,14 @@ const TEAM_SLIDER_CONFIG = { ...SLICK_CONFIG,
   slidesToShow: 7,
   slidesToScroll: 7
 };
+const TESTIMONIALS_SLIDER_CONFIG = { ...SLICK_CONFIG,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  appendDots: '.dots-container',
+  prevArrow: '<button type="button" class="slick-prev-btn"><i class="fas fa-angle-left fa-2x"></i></button>',
+  nextArrow: '<button type="button" class="slick-next-btn"><i class="fas fa-angle-right fa-2x"></i></button>'
+};
 
 /***/ }),
 
@@ -148,13 +157,17 @@ const TEAM_SLIDER_CONFIG = { ...SLICK_CONFIG,
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _show_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./show-slider */ "./js/show-slider.js");
 /* harmony import */ var _team_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./team-slider */ "./js/team-slider.js");
+/* harmony import */ var _testimonials_slier__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./testimonials-slier */ "./js/testimonials-slier.js");
+
 
 
 $(document).ready(function () {
   const showSlider = new _show_slider__WEBPACK_IMPORTED_MODULE_0__["default"]();
   const teamSlider = new _team_slider__WEBPACK_IMPORTED_MODULE_1__["default"]();
+  const testimonialsSlider = new _testimonials_slier__WEBPACK_IMPORTED_MODULE_2__["default"]();
   teamSlider.init();
   showSlider.init();
+  testimonialsSlider.init();
 });
 
 /***/ }),
@@ -203,6 +216,31 @@ class TeamSlider {
 
   init() {
     this.container.slick(_constants__WEBPACK_IMPORTED_MODULE_0__["TEAM_SLIDER_CONFIG"]);
+  }
+
+}
+
+/***/ }),
+
+/***/ "./js/testimonials-slier.js":
+/*!**********************************!*\
+  !*** ./js/testimonials-slier.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TestimonialsSlider; });
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./js/constants.js");
+
+class TestimonialsSlider {
+  constructor() {
+    this.container = $('.testimonials-slider');
+  }
+
+  init() {
+    this.container.slick(_constants__WEBPACK_IMPORTED_MODULE_0__["TESTIMONIALS_SLIDER_CONFIG"]);
   }
 
 }
